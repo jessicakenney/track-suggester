@@ -1,3 +1,6 @@
-#summary, .suggestRuby, .suggestJava, .suggestCSS {
+#summary, .suggestRuby, .suggestJava, .suggestCSS, .suggestCsharp, .default {
     display: none;
+}
+.jumbotron{
+  text-align: center;
 }
