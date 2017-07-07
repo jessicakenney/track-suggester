@@ -1,18 +1,13 @@
 $(document).ready(function() {
   $("#survey").submit(function(event) {
-    alert("hi");
-    alert("calculating your best fit");
+    alert("Calculating your best fit");
   // Retrieve user input
     var why = $("input:radio[name=why]:checked").val();
     var frontOrBack = $("input:radio[name=frontOrBack]:checked").val();
     var size = $("input:radio[name=size]:checked").val();
     var category = $("input:radio[name=category]:checked").val();
     var platform = $("input:radio[name=platform]:checked").val();
-  // debug
-    alert(why);
-  // alert(frontOrBack);
-  // alert(size);
-  // alert(platform);
+
   // Add Text to Summary HTML
     $(".why").text(why);
     $(".frontOrBack").text(frontOrBack);
@@ -20,39 +15,82 @@ $(document).ready(function() {
     $(".category").text(category);
     $(".platform").text(platform);
 
-  //Initialize all the options to 0;
-    var skill = 0;
-    var fun = 0;
-    var startup = 0;
-    var pro = 0;
-    var frontend = 0;
-    var backend = 0;
-    var small = 0;
-    var medium = 0;
-    var large = 0;
-    var mobile = 0;
-    var website = 0;
-    var game = 0;
-    var dataAnal = 0;
-    var microsoft = 0;
-    var apple = 0;
-
-  //Set booleans for selected user input
-    if (why === "skill") { skill = 1; };
-    if (why === "fun") { fun = 1; };
-    if (why === "startup") { startup = 1; };
-    if (why === "pro") { pro = 1; };
-    if (frontOrBack === "frontend") { frontend = 1; };
-    if (frontOrBack === "backend") { backend = 1; };
-    if (size === "small") { small = 1; };
-    if (size === "medium") { medium = 1; };
-    if (size === "large") { large = 1; };
-    if (platform === "microsoft") { microsoft = 1; };
-    if (platform === "apple") { apple = 1; };
-    if (category === "mobile") { mobile = 1; };
-    if (category === "website") { website = 1; };
-    if (category === "game") { game = 1; };
-    if (category === "dataAnal") { dataAnal = 1; };
+  //Set booleans based on checked user input
+    if (why === "skill") {
+      var skill = 1;
+    } else {
+      var skill = 0;
+    };
+    if (why === "fun") {
+      var fun = 1;
+    } else {
+      var fun = 0;
+    };
+    if (why === "startup") {
+      var startup = 1;
+    } else {
+      var startup = 0;
+    };
+    if (why === "pro") {
+      var pro = 1;
+    } else {
+      var pro = 0;
+    };
+    if (frontOrBack === "frontend") {
+      var frontend = 1;
+    } else {
+      var frontend = 0;
+    };
+    if (frontOrBack === "backend") {
+       var backend = 1;
+    } else {
+      var backend = 0;
+    };
+    if (size === "small") {
+      var small = 1;
+    } else {
+      var small = 0;
+     };
+    if (size === "medium") {
+      var medium = 1;
+    } else {
+      var medium = 0;
+     };
+    if (size === "large") {
+      var large = 1;
+    } else {
+      var large = 0;
+    };
+    if (platform === "microsoft") {
+      var microsoft = 1;
+    } else {
+      var microsoft = 0;
+    };
+    if (platform === "apple") {
+      var apple = 1;
+    } else {
+      var apple = 0;
+    };
+    if (category === "mobile") {
+      var mobile = 1;
+    } else {
+      var mobile = 0;
+    };
+    if (category === "website") {
+      var website = 1;
+    } else {
+      var website = 0;
+    };
+    if (category === "game") {
+      var game = 1;
+    } else {
+      var game = 0;
+    };
+    if (category === "dataAnal") {
+      var dataAnal = 1;
+    } else {
+      var dataAnal = 0;
+    };
 
 //initialize
     var suggestRuby = 0;
@@ -78,7 +116,7 @@ $(document).ready(function() {
   };
     $("#summary").show();
     $("form").hide();
-    
+
     if (suggestRuby) {
       $(".suggestRuby").show();
     } else if (suggestJava) {
