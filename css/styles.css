@@ -1,6 +1,26 @@
-#summary, .suggestRuby, .suggestJava, .suggestCSS, .suggestCsharp, .default {
+#summary, p#ruby,p#java,p#csharp,p#css, p#default {
     display: none;
 }
-.jumbotron{
+.container {
+  border: 2px solid gray;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.jumbotron {
+  margin: 0px;
+}
+h3, h2, h1 {
   text-align: center;
+}
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-top: 2px solid gray;
 }

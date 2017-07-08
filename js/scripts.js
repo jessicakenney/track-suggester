@@ -115,19 +115,26 @@ $(document).ready(function() {
     }
   };
     $("#summary").show();
-    $(".intro").hide();
-    $("form").hide();
+    $(".jumbotron").hide();
+    $(".row").hide();
 
+  //this is the selector why isnt it working
+  // $( "div#suggest > p#default" ).css( "border", "3px double yellow" );
+  //only shows if div#suggest is show
+
+
+    $("div#suggest").show();
     if (suggestRuby) {
-      $(".suggestRuby").show();
+      $("p#ruby").show();
     } else if (suggestJava) {
-      $(".suggestJava").show();
+      $("p#suggest").show();
     } else if (suggestCsharp) {
-      $(".suggestCsharp").show();
-    } else if (suggestCsharp) {
-      $(".suggestCsharp").show();
+      $("p#csharp").show();
+    } else if (suggestCSS) {
+      $("p#css").show();
     } else {
-      $(".default").show();
+      $( "p#default" ).show();
+      //$( "div#suggest > p#default" ).show();
     };
 
   event.preventDefault();

@@ -5,30 +5,31 @@
     <title>Track Suggester</title>
     <link href = "css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href = "css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src= "js/jquery-3.2.1.js"></script>
+    <script src= "js/scripts.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
         <h1>Epicodus Track Suggester</h1>
+        <hr class="my-4">
         <h2>Get on the right track</h2>
+        <div class="lead">
+          <p>Epicodus offers the following tracks in Portland and Seattle:
+            <ul>
+              <li>Ruby/Rails</li>
+              <li>PHP/Drupal</li>
+              <li>Java/Android</li>
+              <li>CSS/Design</li>
+              <li>C#/.NET</li>
+            </ul>
+          What is right for you?</p>
+        </div>
       </div>
-      <br>
-      <div class="intro">
-        <p>Currently, Epicodus offers the following tracks in Portland and Seattle:
-          <ul>
-            <li>Ruby/Rails</li>
-            <li>PHP/Drupal</li>
-            <li>Java/Android</li>
-            <li>CSS/Design</li>
-            <li>C#/.NET</li>
-          </ul>
-        </p>
-      </div>
+      <div class="row">
+      <h3> Fill out this personal survey to determine <em>your</em> best fit.</h3>
       <br>
       <form id="survey" >
-        <h4> Fill out the below personal survey to determine your best fit!</h4>
         <p>Q1: Why are you interested in learning to code?</p>
         <div class="radio">
           <label>
@@ -54,7 +55,7 @@
               To be a professional software developer.
           </label>
         </div>
-        <br>
+        <hr class="my-4">
         <p>Q2: Are you more interested in Frontend or Backend?</p>
         <div class="radio">
           <label>
@@ -68,7 +69,7 @@
               Backend
           </label>
         </div>
-        <br>
+        <hr class="my-4">
         <p>Q3:What is more appealing?</p>
         <div class="radio">
           <label>
@@ -88,7 +89,7 @@
               Large company, enterprise
           </label>
         </div>
-        <br>
+        <hr class="my-4">
         <p>Q4:You are most interested in:</p>
         <div class="radio">
           <label>
@@ -114,7 +115,7 @@
               Data Analysis
           </label>
         </div>
-        <br>
+        <hr class="my-4">
         <p>Q5:You are on team: </p>
         <div class="radio">
           <label>
@@ -131,7 +132,7 @@
         <br>
         <button type="submit" class="btn">Submit Answers</button>
       </form>
-
+    </div>
       <div id="summary">
         <h2>Personalized Track Feedback</h2>
         <br>
@@ -143,23 +144,14 @@
             <li><span class="category"></span></li>
             <li><span class="platform"></span></li>
           </ul>
+        <hr class="my-4">
       </div>
       <br>
-      <div class="suggestRuby">
-        <p>We recommend Ruby/Rails track for you because ...add text</p>
-      </div>
-      <div class="suggestJava">
-        <p>We recommend Java/Android track for you because ...add text</p>
-      </div>
-      <div class="suggestCsharp">
-        <p>We recommend C#/.NET track for you because ...add text</p>
-      </div>
-      <div class="suggestCSS">
-        <p>We recommend CSS/Design track for you because ...add text</p>
-      </div>
-      <div class="default">
-        <p>Wow, you are a special person with many varied interests. We recommend do a little more homework and gaining some more focus and try again.</p>
-      </div>
+        <p id="ruby">We recommend Ruby/Rails track for you because ...add text</p>
+        <p id="java">We recommend Java/Android track for you because ...add text</p>
+        <p id="csharp">We recommend C#/.NET track for you because ...add text</p>
+        <p id="css">We recommend CSS/Design track for you because ...add text</p>
+        <p id="default">Wow, you are a special person with many varied interests. We recommend you do a little more homework and gain some more focus and try again.</p>
     </div>
   </body>
 </html>
