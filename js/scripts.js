@@ -115,6 +115,7 @@ $(document).ready(function() {
     }
   };
     $("#summary").show();
+    $(".intro").hide();
     $("form").hide();
 
     if (suggestRuby) {

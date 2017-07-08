@@ -16,7 +16,8 @@ _The Track Suggester provides a personal user survey using radio buttons to sele
 
 ## Known Bugs
 
-_{ }_
+_The website still needs content discussion of why the specific track chosen is a good fit._
+_Additional testing for the default suggestion required._
 
 ## Support and contact details
 
