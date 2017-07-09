@@ -21,10 +21,10 @@ $(document).ready(function() {
     } else {
       var skill = 0;
     };
-    if (why === "fun") {
-      var fun = 1;
+    if (why === "design") {
+      var design = 1;
     } else {
-      var fun = 0;
+      var design = 0;
     };
     if (why === "startup") {
       var startup = 1;
@@ -91,51 +91,47 @@ $(document).ready(function() {
     } else {
       var dataAnal = 0;
     };
-
-//initialize
+//initialize suggestions
     var suggestRuby = 0;
     var suggestJava = 0;
     var suggestCsharp = 0;
     var suggestCSS = 0;
 
 //Use selected booleans to determine suggestions
-    if (frontend) {
-      if (startup || website || small){
-        suggestRuby = 1;
-      } else {
+    if (frontend && ((small || startup) && (website))) {
+      suggestRuby = 1;
+    } else if (frontend && design){
         suggestCSS = 1;
-      }
+    } else {
+        suggestDefault = 1;
     };
-    if (backend) {
-      if (apple || pro || medium || large || mobile ){
-        suggestJava = 1;
-      }
-      if (microsoft){
-        suggestCsharp = 1;
-    }
-  };
-    $("#summary").show();
+    if (backend && (microsoft || large) && (website || dataAnal)) {
+      suggestCsharp = 1;
+    } else if (backend && (game || mobile || website)) {
+           suggestJava = 1;
+           } else {
+             suggestDefault =1;
+           };
+
     $(".jumbotron").hide();
     $(".row").hide();
-
-  //this is the selector why isnt it working
-  // $( "div#suggest > p#default" ).css( "border", "3px double yellow" );
-  //only shows if div#suggest is show
-
+    $("#summary").show();
 
     $("div#suggest").show();
     if (suggestRuby) {
       $("p#ruby").show();
     } else if (suggestJava) {
-      $("p#suggest").show();
+      $("p#java").show();
     } else if (suggestCsharp) {
       $("p#csharp").show();
     } else if (suggestCSS) {
       $("p#css").show();
+    } else  if (suggestDefault) {
+      $( "p#default" ).show();
     } else {
       $( "p#default" ).show();
-      //$( "div#suggest > p#default" ).show();
     };
+    $("h3 > a").show();
 
   event.preventDefault();
   });
